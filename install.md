@@ -5,7 +5,6 @@
 
 ln -s ~/code/.dotfiles/.bashrc ~/.bashrc
 ln -s ~/code/.dotfiles/.gitconfig~/.gitconfig
-ln -s ~/code/.dotfiles/.netrc ~/.netrc
 ln -s ~/code/.dotfiles/.p10k.zsh ~/.p10k.zsh
 ln -s ~/code/.dotfiles/.profile ~/.profile
 ln -s ~/code/.dotfiles/.vimrc ~/.vimrc
