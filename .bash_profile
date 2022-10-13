@@ -25,3 +25,9 @@ export PATH=${PATH}:/usr/local/mysql/bin/
 alias startmysql='sudo /usr/local/mysql/support-files/mysql.server start'
 alias stopmysql='sudo /usr/local/mysql/support-files/mysql.server stop'
 
+# Colors
+export GREP_OPTIONS="--color=auto"
+export GREP_COLOR="4;33"
+export CLICOLOR="auto"
+
+alias ls="ls -G"
