@@ -1,7 +1,7 @@
 "" =============================================================================================
 "
 "==> Vim configuration
-" ==> Date: 11/10/2022
+" ==> Date: 20/10/2022
 " ==> Name: Wanderley
 " =============================================================================================
 " =>  Basic configuration
@@ -220,7 +220,7 @@ let g:bracey_auto_start_browser=1
 let g:bracey_refresh_on_save=0
 let g:bracey_eval_on_save=1
 let g:bracey_auto_start_server=1
-let g:bracey_server_path='http://127.0.0.1'
+let g:bracey_server_path='localhost'
 let g:bracey_server_port=''
 let g:bracey_server_log='/tmp/bracey_server_logfile'
 
