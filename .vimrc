@@ -139,7 +139,6 @@ let g:indentline_enabled = 1
 map <c-k>i :IndentiLinesToggle<CR>
 
 " => Configuration the airline
-" --------------------------------------------------------------------------------
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
@@ -153,7 +152,6 @@ let g:airline#extensions#tabline#formatter = 'default'
 nnoremap <M-Right> :bn<CR>
 nnoremap <M-Left> :bp<CR>
 nnoremap <c-x> :bp \|bd #<CR>
-" ---------------------------------------------------------------------------------
 
 " =>  Plugin configuration - CTRLP
 let g:ctrlp_custom_ignore = 'v[ / ] .(swp|zip)$'
@@ -181,7 +179,6 @@ nmap cc <Plug>NERDCommenterInvert
 let g:ale_linters = {'python' : ['flake8', 'pylint'], 'javascript' : ['eslint']}
 let g:ale_completion_enabled = 0
 
-" -----------------------------------------------------------------------------
 " => HTML CSS sets
 let g:user_emmet_install = 0
 autocmd FileType html,css EmmetInstall
