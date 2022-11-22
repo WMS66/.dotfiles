@@ -4,7 +4,9 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH # descomentei esta linha
 export PATH=$PATH:/usr/local/mysql/bin # Acrescentei esta linha
 
-# Path to your oh-my-zsh installation.
+ #Path to your oh-my-zsh installation.
+ 
+export PATH=$PATH:/usr/local/bin # acrescentei esta linha
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -122,3 +124,15 @@ source /Users/wanderleycabral/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
   export NVM_DIR="$HOME/.nvm"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+#export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+# export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+
+
