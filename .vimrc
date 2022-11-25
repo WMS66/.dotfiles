@@ -1,22 +1,23 @@
-"" =============================================================================================
+" 
+" 
 "
-"==> Vim configuration
-" ==> Date: 01/11/2022
-" ==> Name: Wanderley
 " =============================================================================================
-" =>  Basic configuration
+" ==> Vim configuration
+" ==> Date: 25/11/2022
+" ==> Name: Wanderley Cabral
+" =============================================================================================
 "
+"
+" =>  Basic configuration
 " ==> set startify
 source $HOME/.config/vim/plug-config/start-screen.vim
 " 
-"
 " ==> Header template
 autocmd bufnewfile *.sh so ~/.vim/header_template
 autocmd bufnewfile *.sh exe “1,” . 10 . “g/File Name:/s//File Name: “ .expand(“%”)
 autocmd bufnewfile *.sh exe "1," . 11 . "g/Creation Date:/s//Creation Date: " .strftime("%c")
 autocmd Bufwritepre,filewritepre *.sh execute "normal ma"
 " =====================================================================================
-
 "
 " => Plugin coc
 source ~/.vim/coc.nvimrc
@@ -34,7 +35,6 @@ let term_program=$TERM_PROGRAM
 " Check for conflicts with Apple Terminal app
 if term_program !=? 'Apple_Terminal'
 	set termguicolors
-
 else
 	if $TERM !=? 'xterm-256color'
 		set termguicolors
@@ -64,8 +64,9 @@ function PythonConfig()
     set tabstop=4 softtabstop=4 expandtab shiftwidth=4
 	autocmd FileType python call PythonConfig()
 endfunction
-" ---------------------------------------------
 
+
+" ---------------------------------------------
 set number              " => shows the number of lines on the side."
 set title               " => shows the file title."
 set showcmd
@@ -90,7 +91,7 @@ let &t_ZR="\e[23m"
 " => Font  - Dev Icons
 set guifont=Droid\ Sans\ Mono\ Nerd\ Font\ Complete\ Mono:h16 
 
-" =>  => shows the lines from the current one.
+" => Shows the lines from the current one.
 set relativenumber  
 set confirm
 
@@ -124,7 +125,7 @@ if filereadable(expand("~/.config/vim/plug-config/.vimrc.plug"))
 	source ~/.config/vim/plug-config/.vimrc.plug
 endif
 
-" ==> --------------------------------
+" ----------------------------------------------
 " => Set true italics support
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
@@ -145,7 +146,6 @@ let g:airline_powerline_fonts = 1
 let g:airline_statusline_ontop=0 
 let g:airline_theme='sonokai'  " => Theme
 let g:airline_theme = 'gruvbox_material'
-
 let g:airline#extensions#tabline#formatter = 'default'
 
 " => Browsing between buffers"
@@ -169,7 +169,7 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 let g:NERDTreeWinSize=38
 
-" Plugin Commenter
+"  => Plugin Commenter
 filetype plugin on
 let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
@@ -195,9 +195,10 @@ let g:user_emmet_settings = {
 \              ."<html lang=\"pt-BR\">\n"
 \              ."<head>\n"
 \              ."\t<meta charset=\"${charset}\">\n"
-\              ."\t<title></title>\n"
 \              ."\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
-\              ."\t<link rel=\"stylesheet\" href=\"\">\n"
+\              ."\t<link type=\"text/css\" rel=\"stylesheet\" href=\"\">\n"
+\              
+\               ."\t<title>Document</title>\n"
 \              ."</head>\n"
 \              ."<body>\n\t${child}|\n</body>\n"
 \              ."</html>",
@@ -224,4 +225,4 @@ let g:bracey_server_log='/tmp/bracey_server_logfile'
 " => Set indentation
 let g:indentLine_enabled = 1
 
-" ====================>  <====================
+" <====================>             <====================>  <====================>             <====================>
