@@ -8,10 +8,10 @@
 "
 " =>  Basic configuration
 " ==> set startify
-source $HOME/.config/vim/plug-config/start-screen.vim
+source ~/.config/vim/plug-config/start-screen.vim
 " 
 " ==> Header template for sh files
- autocmd bufnewfile *.sh so ~/.vim/header_template
+autocmd bufnewfile *.sh so ~/.vim/header_template
 autocmd bufnewfile *.sh exe “1,” . 10 . “g/File Name:/s//File Name: “ .expand(“%”)
 autocmd bufnewfile *.sh exe "1," . 11 . "g/Creation Date:/s//Creation Date: " .strftime("%c")
 autocmd Bufwritepre,filewritepre *.sh execute "normal ma"
@@ -63,8 +63,8 @@ function PythonConfig()
 	autocmd FileType python call PythonConfig()
 endfunction
 
-
 " ---------------------------------------------
+let mapleader=","
 set number              " => shows the number of lines on the side."
 set title               " => shows the file title."
 set showcmd
@@ -133,7 +133,8 @@ let &t_ZR="\e[23m"
 let g:gruvbox_material_better_performance = 1
 set background=dark
 let g:gruvbox_material_background='medium'
-colorscheme gruvbox-material
+colorscheme dracula
+"  colorscheme gruvbox-material
 let g:indentline_enabled = 1
 map <c-k>i :IndentiLinesToggle<CR>
 
@@ -178,8 +179,9 @@ let g:ale_linters = {'python' : ['flake8', 'pylint'], 'javascript' : ['eslint']}
 let g:ale_completion_enabled = 0
 
 " => HTML CSS sets
-let g:user_emmet_install = 0
+let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+let g:user_emmet_leader_key='<c-z>'
 
 let g:user_emmet_settings = {
 \  'variables': {'lang': 'ja'},
@@ -206,60 +208,63 @@ let g:user_emmet_settings = {
 " -----------------------------------------------------------------------------
 
 " => Bracey Live Server Web
-nnoremap <leader>8:Bracey <CR>
-nnoremap <leader><F9> :BraceyReload <CR>
-nnoremap <leader>0 :BraceyStop
-autocmd FileType HTML :Bracey <CR>
 
-let g:bracey_browser_command=0
-let g:bracey_auto_start_browser=1
-let g:bracey_refresh_on_save=0
-let g:bracey_eval_on_save=1
-let g:bracey_auto_start_server=1
-let g:bracey_server_path='localhost'
-let g:bracey_server_port='3000'
-let g:bracey_server_log='/tmp/bracey_server_logfile'
+" nnoremap <leader><F8> :Bracey <CR>
+" nnoremap <leader><F9> :BraceyReload <CR>
+" nnoremap <leader>0 :BraceyStop <CR>
+" autocmd FileType html Bracey 
+
+" let g:bracey_browser_command=0
+" let g:bracey_auto_start_browser=1
+" let g:bracey_refresh_on_save=1
+" let g:bracey_eval_on_save=1
+
+" let g:bracey_auto_start_server=1
+" let g:bracey_server_allow_remote_connections=0
+" let g:bracey_server_port='3000'
+" let g:bracey_server_path='http://127.0.0.1'
+" let g:bracey_server_log='/tmp/bracey_server_logfile'
+
 
 " => Set indentation
 let g:indentLine_enabled = 1
 
-
-
-
-
 " -----------------------------------------------------------------------
 " => config Plug 'voldikss/vim-floaterm'
-"
-"nnoremap <A-t> :FloatermNew<CR>
-"nnoremap <A-r> :FloatermNew lf<CR>
+nnoremap <A-t> :FloatermNew<CR>
+nnoremap <A-r> :FloatermNew lf<CR>
 
-"let g:floaterm_wintype ='normal'
-"let g:floaterm_keymap_toggle = '<F1>'
-"let g:floaterm_keymap_next   = '<F2>'
-"let g:floaterm_keymap_prev   = '<F3>'
-"let g:floaterm_keymap_new    = '<F4>'
+let g:floaterm_wintype ='belowright'
+let g:floaterm_keymap_new    = '<Leader> f'
+let g:floaterm_keymap_toggle = '<Leader>ft'
+let g:floaterm_keymap_prev   = '<Leader>fp'
+let g:floaterm_keymap_next   = '<Leader>fn'
+let g:floaterm_keymap_kill   = '<Leader>fk'
+let g:floaterm_position="left"
 
-"hi FloatermBorder guibg=teal  guifg=yellow"
+hi FloatermBorder guibg=teal  guifg=yellow
 
-"let g:floaterm_gitcommit='floaterm'
-"let g:floaterm_autoinsert=1
-"let g:floaterm_width=0.8
-"let g:floaterm_height=0.8
-"let g:floaterm_wintitle=0
-"let g:floaterm_autoclose=1
-
+let g:floaterm_gitcommit='floaterm'
+let g:floaterm_autoinsert=1
+let g:floaterm_width=0.5
+let g:floaterm_height=0.5
+let g:floaterm_wintitle=0
+let g:floaterm_autoclose=1
 
 "let g:which_key_map.t = {
- "     \ 'name' : '+terminal' ,
- "     \ ';' : [':FloatermNew --wintype=popup --height=6'        , 'terminal'],
- "     \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
- "     \ 'g' : [':FloatermNew lazygit'                           , 'git'],
- "     \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
- "     \ 'n' : [':FloatermNew node'                              , 'node'],
- "     \ 'N' : [':FloatermNew nnn'                               , 'nnn'],
- "     \ 'p' : [':FloatermNew python'                            , 'python'],
- "     \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
- "     \ 't' : [':FloatermToggle'                                , 'toggle'],
- "     \ 'y' : [':FloatermNew ytop'                              , 'ytop'],
- "     \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
- "     \ }
+"      \ 'name' : '+terminal' ,
+"      \ ';' : [':FloatermNew --wintype=popup --height=6'        , 'terminal'],
+"      \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
+"      \ 'g' : [':FloatermNew lazygit'                           , 'git'],
+"      \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
+"      \ 'n' : [':FloatermNew node'                              , 'node'],
+"      \ 'N' : [':FloatermNew nnn'                               , 'nnn'],
+"      \ 'p' : [':FloatermNew python'                            , 'python'],
+"      \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
+"      \ 't' : [':FloatermToggle'                                , 'toggle'],
+"      \ 'y' : [':FloatermNew ytop'                              , 'ytop'],
+"      \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
+"      \ }
+
+
+"let g:coc_disable_startup_warning = 1
