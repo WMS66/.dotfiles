@@ -1,4 +1,3 @@
-
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH # descomentei esta linha
 export PATH=$PATH:/usr/local/mysql/bin # Acrescentei esta linha
@@ -86,8 +85,8 @@ source $ZSH/oh-my-zsh.sh
 # source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
 # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # User configuration
 
@@ -128,10 +127,10 @@ source /Users/wanderleycabral/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 #export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 # export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+#export ANDROID_HOME=$HOME/Library/Android/sdk
+#export PATH=$PATH:$ANDROID_HOME/emulator
+#export PATH=$PATH:$ANDROID_HOME/tools
+#export PATH=$PATH:$ANDROID_HOME/tools/bin
+#export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 
