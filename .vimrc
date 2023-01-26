@@ -1,12 +1,13 @@
 
+
 " =============================================================================================
 " ==> Vim configuration
 " ==> Date: 25/11/2022
 " ==> Name: Wanderley Cabral
 " =============================================================================================
 "
-"
 " =>  Basic configuration
+"
 " ==> set startify
 source ~/.config/vim/plug-config/start-screen.vim
 " 
@@ -18,7 +19,9 @@ autocmd Bufwritepre,filewritepre *.sh execute "normal ma"
 " =====================================================================================
 "
 " => Plugin coc
-source ~/.vim/coc.nvimrc
+"source ~/.vim/coc.nvimrc
+source ~/.vim/pack/git-plugins/start/coc.nvim/plugin/coc.vim
+let g:coc_disable_startup_warning = 1
 " =============================================================================================
 " 
 syntax enable
@@ -38,6 +41,7 @@ else
 		set termguicolors
 	endif
 endif
+
 "
 " => Config open files
 " HTML
@@ -64,7 +68,8 @@ function PythonConfig()
 endfunction
 
 " ---------------------------------------------
-let mapleader=","
+let mapleader = ","
+
 set number              " => shows the number of lines on the side."
 set title               " => shows the file title."
 set showcmd
@@ -118,9 +123,10 @@ nmap <C-s> :w<CR>
 " => open the terminal in vim"
 nnoremap <C-t> :below terminal<CR> 
 
+let g:ale_disable_lsp = 1
 " => call the Plugins .vimrc.plug file
-if filereadable(expand("~/.config/vim/plug-config/.vimrc.plug"))
-	source ~/.config/vim/plug-config/.vimrc.plug
+if filereadable(expand("~/.config/vim/plug-config/vimrc.plug"))
+	source ~/.config/vim/plug-config/vimrc.plug
 endif
 
 " ----------------------------------------------
@@ -130,11 +136,21 @@ let &t_ZR="\e[23m"
 
 " => Themes
 " => GRUVBOX configuration
+
+if has('termguicolors')
+    set termguicolors
+endif
+
+set background=light
+let g:gruvbox_material_background = 'soft'
+let g:gruvbox_material_better_performance = 1
+
+let g:lightline = {'colorscheme' : 'gruvbox_material'}
 let g:gruvbox_material_better_performance = 1
 set background=dark
-let g:gruvbox_material_background='medium'
+let g:gruvbox_material_background='soft'
+let g:gruvbox_material_better_performance = 1
 colorscheme dracula
-"  colorscheme gruvbox-material
 let g:indentline_enabled = 1
 map <c-k>i :IndentiLinesToggle<CR>
 
@@ -144,7 +160,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_statusline_ontop=0 
 let g:airline_theme='sonokai'  " => Theme
-let g:airline_theme = 'gruvbox_material'
 let g:airline#extensions#tabline#formatter = 'default'
 
 " => Browsing between buffers"
@@ -168,15 +183,23 @@ let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 let g:NERDTreeWinSize=38
 
-"  => Plugin Commenter
+ " => Plugin Commenter
 filetype plugin on
 let g:NERDSpaceDelims = 1
 let g:NERDDefaultAlign = 'left'
 nmap cc <Plug>NERDCommenterInvert
 
+ " => Plugin omnifunc   
+if has("autocmd") && exists("+omnifunc")
+autocmd Filetype *
+	    \	if &omnifunc == "" |
+	    \		setlocal omnifunc=syntaxcomplete#Complete |
+	    \	endif
+endif
+
 " => Plugin ale
 let g:ale_linters = {'python' : ['flake8', 'pylint'], 'javascript' : ['eslint']}
-let g:ale_completion_enabled = 0
+let g:ale_completion_enabled = 1
 
 " => HTML CSS sets
 let g:user_emmet_install_global = 0
@@ -266,5 +289,3 @@ let g:floaterm_autoclose=1
 "      \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
 "      \ }
 
-
-"let g:coc_disable_startup_warning = 1
