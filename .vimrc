@@ -2,7 +2,7 @@
 
 " =============================================================================================
 " ==> Vim configuration
-" ==> Date: 25/11/2022
+" ==> Date: 10/02/2023
 " ==> Name: Wanderley Cabral
 " =============================================================================================
 "
@@ -10,7 +10,14 @@
 "
 " ==> set startify
 source ~/.config/vim/plug-config/start-screen.vim
-" 
+"
+"Desabilitarar as teclas de seta 
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+
 " ==> Header template for sh files
 autocmd bufnewfile *.sh so ~/.vim/header_template
 autocmd bufnewfile *.sh exe “1,” . 10 . “g/File Name:/s//File Name: “ .expand(“%”)
