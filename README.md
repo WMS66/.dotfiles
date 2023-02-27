@@ -5,7 +5,7 @@
 
 ### List of versioned files
 
-### ln -s - Create file shortcut
+#### ln -s - Create file shortcut
 
 
         ln -s ~/code/.dotfiles/.bashrc ~/.bashrc
@@ -20,4 +20,4 @@
 
 
 
-### Any help is welcome!
+#### Any help is welcome!
