@@ -1,0 +1,20 @@
+# xargs brew install < apps.txt
+
+iterminal2
+git
+brew
+yarn
+node
+google-chrome
+visual-studio-code
+rectangle
+alt-tab
+alfred
+app-cleaner
+discord
+1password
+notion
+oh-my-zsh
+zsh-syntax-highlighting
+zsh-autosuggestions
+spaceship-zsh-theme
