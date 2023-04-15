@@ -18,6 +18,7 @@
         ln -s ~/code/.dotfiles/.zshrc ~/.zshrc
         ln -s ~/code/.dotfiles/.bash_profile ~/.bash_profile
 
-
+Adicionei um arquivo com a lista de apps instalados.
+Usando o comando [# xargs brew install < apps.txt] posso instalar a lista dos apps.
 
 #### Any help is welcome!
