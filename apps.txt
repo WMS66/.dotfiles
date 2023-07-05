@@ -1,4 +1,5 @@
 # xargs brew install < apps.txt
+# Instalação do pacote [JAVA] (https://code.visualstudio.com/docs/java/java-tutorial#_coding-pack-for-java)
 
 iterminal2
 git
