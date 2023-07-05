@@ -1,0 +1,29 @@
+# xargs brew install < apps.txt
+# Instalação do pacote [JAVA] (https://code.visualstudio.com/docs/java/java-tutorial#_coding-pack-for-java)
+
+iterminal2
+git
+brew
+yarn
+node
+google-chrome
+visual-studio-code
+rectangle
+alt-tab
+alfred
+app-cleaner
+discord
+1password
+notion
+python@3.10
+dbeaver-community
+nvm
+python 3.11.3
+Flutter
+Android-Studio
+cocoapods
+
+oh-my-zsh
+zsh-syntax-highlighting
+zsh-autosuggestions
+spaceship-zsh-theme
