@@ -74,22 +74,18 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    git
-    vi-mode
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-    web-search
+        git
+        vi-mode
+        zsh-autosuggestions
+        zsh-syntax-highlighting
+        web-search
+        macos
+        z
+        docker-compose
 )
-
 source $ZSH/oh-my-zsh.sh
-# source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
-# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # User configuration
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -116,21 +112,10 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source /Users/wanderleycabral/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 # [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-
-#export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
-# export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
-#export ANDROID_HOME=$HOME/Library/Android/sdk
-#export PATH=$PATH:$ANDROID_HOME/emulator
-#export PATH=$PATH:$ANDROID_HOME/tools
-#export PATH=$PATH:$ANDROID_HOME/tools/bin
-#export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
 
